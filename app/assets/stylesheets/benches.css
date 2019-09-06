@@ -1,0 +1,96 @@
+#map-container {
+    width: 800px;
+    height: 500px;
+    /* margin-left: 5%; */
+    margin-top: 10px;
+    margin-right: 50px
+}
+
+.bench-index {
+    display: flex;
+    justify-content: space-between;
+    /* position: relative; */
+}
+
+.bench-descriptions {
+    list-style-type: none;
+    /* width: 50%; */
+    
+    background-color: white;
+    padding: 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+
+.bench-list {
+    /* justify-content: flex-end; */
+    width: 40%;
+    margin-right: 20px
+    /* padding: 40px */
+}
+
+.Greeting {
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-bottom: 2px solid gray;
+}
+.user-message {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+.profile-info{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0 ;
+    list-style: none;
+    justify-content: space-around
+}
+.profile-info li {
+    margin-right: 15px;
+    margin-top: 20px
+}
+.profile-info li:hover{
+    cursor: pointer;
+}
+
+
+.bench-descriptions li  {
+    padding: 15px;
+    border-bottom: 1px solid black;
+
+}
+.bench-descriptions li:hover{
+    background-color:lightblue;
+    cursor: pointer;
+    border-bottom: 1px solid black
+}
+
+
+body {
+font-family: 'Roboto Mono', monospace;
+      /* background-image: linear-gradient(to bottom right, red, yellow); */
+    /* background-color: lightblue */
+      /* background-image: linear-gradient(to bottom,  blue, wheat); */
+
+}
+.map-box{
+    /* display: block; */
+    /* margin-right: 20%  */
+    border: 1px solid black;
+    margin-top: 15px
+}
+.filter-form{
+    align-self: flex-end;
+    justify-self: flex-start;
+    /* position: absolute;
+    left: 7%;
+    top: 520px */
+}
