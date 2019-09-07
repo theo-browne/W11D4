@@ -23,7 +23,7 @@ export default class SignUp extends React.Component {
 
   render() {
     return (
-      <form>
+      <form className="auth-form">
         <label>Username:
           <input type="text" value={this.state.username} onChange={this.handleInput("username")} />
         </label>

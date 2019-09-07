@@ -24,9 +24,10 @@ import {withRouter} from 'react-router-dom'
             bounds["maxlat"] = this.map.getBounds().getNorthEast().lat()
             bounds["minlng"] = this.map.getBounds().getSouthWest().lng()
             bounds["minlat"] = this.map.getBounds().getSouthWest().lat()
-            
+            if (that.props.fetchBenches) {
             that.props.fetchBenches(bounds)
             that.props.updateBounds(bounds)
+            }
         })
         this.map.addListener('click', (e) => {
             that.handleClick(e)

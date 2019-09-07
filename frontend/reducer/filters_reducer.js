@@ -1,5 +1,5 @@
-import {UPDATE_BOUNDS} from '../actions/filter_actions'
-import {UPDATE_FILTER} from '../actions/bench_actions'
+import { UPDATE_BOUNDS } from '../actions/filter_actions'
+import { UPDATE_FILTER } from '../actions/bench_actions'
 
 const filtersReducer = (state = {}, action) => {
     Object.freeze(state)
@@ -9,11 +9,11 @@ const filtersReducer = (state = {}, action) => {
     switch (action.type) {
 
         case UPDATE_FILTER:
+            
             newState[action.filter] = action.value
             return newState
         case UPDATE_BOUNDS:
-            
-            newState = action.bounds
+            newState["bounds"] = action.bounds
             return newState
         default:
         return state;

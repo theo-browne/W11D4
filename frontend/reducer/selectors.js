@@ -5,3 +5,8 @@
 
 //     }
 // }
+
+export function benchReviews(state, benchId) {
+    
+    return Object.values(state.entities.reviews).filter(review => review.bench_id === +benchId)
+}

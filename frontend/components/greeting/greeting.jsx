@@ -8,13 +8,30 @@ export default class Greeting extends React.Component {
 
   render() {
     let content = this.props.username ? (
+      <div>
       <div className="user-message">
         <h1>hi {this.props.username}</h1>
         <button onClick={this.props.logout}>Logout</button>
+        </div>
+        <div className="profile-info">
+          <li>
+            Saved
+        </li>
+          <li>
+            Benches
+        </li>
+          <li>
+            Messages
+        </li>
+          <li>
+            Profile
+        </li>
+
+        </div>
       </div>
     ) : (
-        <div className="Greeting">
-        <Link to="/signin">
+        <div className="SignIn">
+        <Link to="/signin" >
           <button>Sign In</button>
         </Link>
         <Link to="/signup">
@@ -24,22 +41,10 @@ export default class Greeting extends React.Component {
     )
     return (
       <div className="Greeting">
-        <h1> <h1>Bench Bnb</h1></h1>
+        <div >
+        <Link to="/" style={{ textDecoration: 'none', color: "black" }}> <h1 >Bench Bnb</h1></Link> 
       {content}
-      <div className="profile-info">
-        <li>
-          Saved
-        </li>
-        <li>
-          Benches
-        </li>
-        <li>
-          Messages
-        </li>
-        <li>
-          Profile
-        </li>
-      </div>
+        </div>
       </div>
       )
   }

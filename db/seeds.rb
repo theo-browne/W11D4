@@ -9,8 +9,12 @@ require 'faker'
 include Faker
 
 Bench.destroy_all
+Review.destroy_all
 
-5.times do 
- Bench.create(description: Faker::TvShows::RickAndMorty.quote, seating: rand(1..6), lng: (-122.4 - (0.02)* rand()), lat: (37.8 - (0.02) * rand()))
+10.times do 
+ bench = Bench.create(description: Faker::TvShows::RickAndMorty.quote, seating: rand(1..6), lng: (-122.4 - (0.02)* rand()), lat: (37.8 - (0.02) * rand()))
+    8.times do 
+        Review.create(comment: Faker::TvShows::RickAndMorty.quote, rating: rand(1..5), bench_id: bench.id, user_id: rand(1..5) )
+    end   
 
 end

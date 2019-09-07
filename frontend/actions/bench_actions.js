@@ -28,3 +28,8 @@ export const createBench = (bench) => dispatch => {
 export const fetchBenches = (bounds) => dispatch => {
     return ApiBenchUtils.fetchBenches(bounds).then(benches => dispatch(receiveBenches(benches)))
 }
+
+export const fetchBench = (benchId) => dispatch => {
+    return ApiBenchUtils.fetchBench(benchId).then(bench => dispatch(receiveBench(bench)))
+}
+

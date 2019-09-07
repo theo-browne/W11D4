@@ -1,7 +1,7 @@
-import filterReducer from "./users_reducer"
+import filtersReducer from "./filters_reducer"
 import { combineReducers } from "redux"
-import benchReducer from './benches_reducer'
+// import benchReducer from './benches_reducer'
 
 export default combineReducers({
-    filter: filterReducer,
+    filters: filtersReducer
 })

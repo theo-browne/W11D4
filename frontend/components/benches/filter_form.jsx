@@ -4,8 +4,8 @@ export default class FilterForm extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            min: 0,
-            max: 10
+            min_seating: 0,
+            max_seating: 10
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -18,23 +18,27 @@ export default class FilterForm extends React.Component {
     }
     handleSubmit(){
         // e.preventDefault()
-        Object.keys(this.state).forEach(filter => {
-            this.props.updateFilter(filter, this.state[filter] )
-        })
+        // Object.keys(this.state).forEach(filter => {
+        //     this.props.updateFilter(filter, this.state[filter] )
+        // })
+        
+        let filters = Object.assign({}, this.props.filters.bounds, this.state )
+        this.props.fetchBenches(filters)
     }
 
 
 
     render(){
+        
         return(
             <div className="filter-form">
                 <form action="">
                     <label > Minimum Seating
-                        <input type="number" value={this.state.min} onChange={this.handleInput('min')}/>
+                        <input type="number" value={this.state.min_seating} onChange={this.handleInput('min_seating')}/>
                     </label>
                     <br/>
                     <label > Maximum Seating
-                        <input type="number" value={this.state.max} onChange={this.handleInput('max')} />
+                        <input type="number" value={this.state.max_seating} onChange={this.handleInput('max_seating')} />
                     </label>
                     <br/>
                     <button onClick={this.handleSubmit}>Apply Filter</button>

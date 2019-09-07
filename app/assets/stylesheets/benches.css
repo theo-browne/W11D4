@@ -39,11 +39,17 @@
     justify-content: center;
     position: relative;
     border-bottom: 2px solid gray;
+    height: 130px
 }
 .user-message {
     position: absolute;
     top: 0;
-    left: 0
+    left: 0;
+    padding:0;
+    align-items: flex-start
+}
+.user-message button {
+    margin: 0
 }
 .profile-info{
     display: flex;
@@ -65,6 +71,7 @@
 .bench-descriptions li  {
     padding: 15px;
     border-bottom: 1px solid black;
+    color: black
 
 }
 .bench-descriptions li:hover{
@@ -93,4 +100,41 @@ font-family: 'Roboto Mono', monospace;
     /* position: absolute;
     left: 7%;
     top: 520px */
+}
+
+.heading{
+    color: black;
+    text-decoration: none;
+    border: none
+}
+
+link{
+    text-decoration: none;
+}
+
+.show-map-box {
+    display: flex
+}
+
+.review-rating input {
+    margin-right: 10px
+}
+.bench-show-details{
+    width: 40%
+}
+
+link{
+    text-decoration: none
+}
+
+
+
+.auth-form{
+    padding-top: 20px;
+    margin: auto
+}
+
+.SignIn{
+    position: absolute;
+    left:0
 }

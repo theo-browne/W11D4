@@ -15,7 +15,6 @@ export default class BenchForm extends React.Component {
     handleInput(cat){
        return (e) => {
             this.setState({[cat]: e.target.value})
-            console.log(this.state)
         }
     }
     handleSubmit(e){
